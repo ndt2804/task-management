@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\study\\intern\\task-management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|d:\\study\\intern\\task-management\\task-management\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|solutionrelative:task-management\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|d:\\study\\intern\\task-management\\task-management\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|solutionrelative:task-management\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|d:\\study\\intern\\task-management\\task-management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|solutionrelative:task-management\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|d:\\study\\intern\\task-management\\task-management\\data\\mongodbservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|solutionrelative:task-management\\data\\mongodbservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|d:\\study\\intern\\task-management\\task-management\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|solutionrelative:task-management\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|d:\\study\\intern\\task-management\\task-management\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|solutionrelative:task-management\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|d:\\study\\intern\\task-management\\task-management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|solutionrelative:task-management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|d:\\study\\intern\\task-management\\task-management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8B09CDAD-CABD-40E0-A9AD-69AA21EF988D}|task-management\\task-management.csproj|solutionrelative:task-management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\study\\intern\\task-management\\task-management\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "task-management\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\study\\intern\\task-management\\task-management\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "task-management\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAUwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T09:40:33.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\study\\intern\\task-management\\task-management\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "task-management\\WeatherForecast.cs",
+              "ToolTip": "D:\\study\\intern\\task-management\\task-management\\WeatherForecast.cs",
+              "RelativeToolTip": "task-management\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T08:07:19.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\study\\intern\\task-management\\task-management\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "task-management\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\study\\intern\\task-management\\task-management\\Controllers\\UserController.cs",
+              "RelativeToolTip": "task-management\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T08:04:32.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\study\\intern\\task-management\\task-management\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "task-management\\Entities\\User.cs",
+              "ToolTip": "D:\\study\\intern\\task-management\\task-management\\Entities\\User.cs",
+              "RelativeToolTip": "task-management\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T08:00:22.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MongoDbServices.cs",
+              "DocumentMoniker": "D:\\study\\intern\\task-management\\task-management\\Data\\MongoDbServices.cs",
+              "RelativeDocumentMoniker": "task-management\\Data\\MongoDbServices.cs",
+              "ToolTip": "D:\\study\\intern\\task-management\\task-management\\Data\\MongoDbServices.cs",
+              "RelativeToolTip": "task-management\\Data\\MongoDbServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T07:53:31.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\study\\intern\\task-management\\task-management\\appsettings.json",
+              "RelativeDocumentMoniker": "task-management\\appsettings.json",
+              "ToolTip": "D:\\study\\intern\\task-management\\task-management\\appsettings.json",
+              "RelativeToolTip": "task-management\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-04T07:34:26.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\study\\intern\\task-management\\task-management\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "task-management\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\study\\intern\\task-management\\task-management\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "task-management\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T06:52:44.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\study\\intern\\task-management\\task-management\\Program.cs",
+              "RelativeDocumentMoniker": "task-management\\Program.cs",
+              "ToolTip": "D:\\study\\intern\\task-management\\task-management\\Program.cs",
+              "RelativeToolTip": "task-management\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T00:16:24.993Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
