@@ -1,12 +1,16 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using BCrypt.Net;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using System.Security.Cryptography;
 using System.Text;
 using task_management.Data;
 using task_management.Entities;
-
+using task_management.Dtos;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 namespace task_management.Controllers
 {
     [Route("api/[controller]")]
@@ -15,10 +19,11 @@ namespace task_management.Controllers
     {
 
         private readonly IMongoCollection<User>? _user;
-        public AuthController(MongoDbServices mongoDbServices)
+        private readonly IConfiguration _configuration;
+        public AuthController(MongoDbServices mongoDbServices, IConfiguration configuration)
         {
             _user = mongoDbServices.Database?.GetCollection<User>("User");
-
+            _configuration = configuration;
         }
         [HttpGet]
         public async Task<IEnumerable<User>> GetUser()
@@ -41,36 +46,68 @@ namespace task_management.Controllers
             {
                 throw new Exception("User already exists.");
             }
-
+            var passwordHash = BCrypt.Net.BCrypt.HashPassword(user.Password);
             var newUser = new User
             {
                 Username = user.Username,
                 Email = user.Email,
-                Password = HashPassword(user.Password) 
+                Password = passwordHash,
             };
 
-            await _user.InsertOneAsync(user);
-            return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
+            await _user.InsertOneAsync(newUser);
+            return CreatedAtAction(nameof(GetById), new { id = newUser.Id }, newUser);
         }
-
         [HttpPost]
-        public async Task<ActionResult<User?>> Create(User user)
-        {
-            await _user.InsertOneAsync(user);
-            return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
-        }
-     
+        [Route("login")]
 
-        private string HashPassword(string password)
+        public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
-            using (var hmac = new HMACSHA256())
+            var user = await _user.Find(u => u.Email == loginModel.Email).FirstOrDefaultAsync();
+            if (user == null)
             {
-                var hashBytes = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(hashBytes);
+                return BadRequest("User not found.");
             }
-        }
+            if (!BCrypt.Net.BCrypt.Verify(loginModel.Password, user.Password))
+            {
+                return Unauthorized("Invalid credentials.");
+            }
+            var token = GenerateJwtToken(user);
+            var result = new
+            {
+                Message = $"Welcome back, {user.Email}! :)",
+                Token = token
+            };
 
-        private bool VerifyPassword(string password, string storedHash)
+            return Ok(result);
+        }
+        [HttpPost]
+        private string GenerateJwtToken(User user)
+        {
+            var secretKey = _configuration["Jwt:SecretKey"];
+            var issuer = _configuration["Jwt:Issuer"];
+            var audience = _configuration["Jwt:Audience"];
+
+            var claims = new[]
+            {
+            new Claim(ClaimTypes.Name, user.Username),
+            new Claim(ClaimTypes.Email, user.Email),
+        };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: issuer,
+                audience: audience,
+                claims: claims,
+                expires: DateTime.Now.AddHours(1), 
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+    
+    private bool VerifyPassword(string password, string storedHash)
         {
             var hashBytes = Convert.FromBase64String(storedHash);
             using (var hmac = new HMACSHA256())

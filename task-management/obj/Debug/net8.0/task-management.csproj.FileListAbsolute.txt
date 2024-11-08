@@ -36,3 +36,14 @@ D:\study\intern\task-management\task-management\bin\Debug\net8.0\MongoDB.Driver.
 D:\study\intern\task-management\task-management\bin\Debug\net8.0\SharpCompress.dll
 D:\study\intern\task-management\task-management\bin\Debug\net8.0\Snappier.dll
 D:\study\intern\task-management\task-management\bin\Debug\net8.0\ZstdSharp.dll
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\study\intern\task-management\task-management\obj\Debug\net8.0\task-management.sourcelink.json
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\study\intern\task-management\task-management\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
