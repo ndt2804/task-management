@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Threading.Tasks;
@@ -23,9 +24,40 @@ namespace task_management.Controllers
         [HttpGet]
         public async Task<IActionResult> GetTasks()
         {
-            var tasks = await _task.Find(_ => true).ToListAsync();
-            return Ok(tasks);
+            var pipeline = new[]
+            {
+            new BsonDocument("$lookup", new BsonDocument
+            {
+                { "from", "User" },       
+                { "localField", "userId" },  
+                { "foreignField", "_id" }, 
+                { "as", "user" }           
+            }),
+
+            new BsonDocument("$unwind", new BsonDocument
+            {
+                { "path", "$user" },                        
+                { "preserveNullAndEmptyArrays", true }     
+            })
+        };
+
+            var tasksWithUser = await _task.Aggregate<TaskItem>(pipeline).ToListAsync();
+            var result = tasksWithUser.Select(t => new
+            {
+                TaskId = t.Id,
+                TaskName = t.Name,
+                TaskDescription = t.Description,
+                TaskIsCompleted = t.IsCompleted,
+                TaskCreatedAt = t.CreatedAt,
+                TaskUpdatedAt = t.UpdatedAt,
+                UserFullName = t.User?.Username, 
+                UserEmail = t.User?.Email
+            }).ToList();
+
+            return Ok(result);
         }
+
+
         [HttpGet("getTask/{id}")]
         public async Task<IActionResult> GetTaskById(string id)
         {

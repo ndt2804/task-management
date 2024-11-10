@@ -30,5 +30,7 @@ namespace task_management.Entities
 
         [BsonElement("userId")]
         public string UserId { get; set; }
+        [BsonIgnore]  // Ignore this property for database serialization
+        public User? User { get; set; }  //
     }
 }
